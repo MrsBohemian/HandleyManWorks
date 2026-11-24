@@ -17,7 +17,7 @@
     overflow: hidden;
     box-sizing: border-box;
     border-block: clamp(64px, 15svh, 176px) solid #f5eee3;
-    background: #a84420;
+    background: linear-gradient(165deg, #903418, #ac4725 62%, #a64222);
   }
 
   .photo {
@@ -29,6 +29,20 @@
   }
 
   .ceiling-fan { object-position: left 23%; }
+
+  @media (min-aspect-ratio: 8/5) and (min-width: 900px) {
+    .ceiling-fan {
+      left: auto;
+      width: 77%;
+      object-position: left top;
+      mask-image: linear-gradient(to right, transparent, black 21%);
+    }
+
+    .bus-scene .bus-stop {
+      height: 109%;
+      top: auto;
+    }
+  }
 
   .bus-scene {
     position: absolute;
@@ -55,7 +69,7 @@
   }
 
   .handley-man { left: 13%; }
-  .handley-works { left: 38%; }
+  .handley-works { left: 49%; }
 
   @media (max-width: 640px) {
     .ceiling-fan { object-position: 24% top; }
