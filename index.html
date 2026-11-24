@@ -5,35 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Handley Works</title>
 <style>
-  * { box-sizing: border-box; }
-
   body {
     margin: 0;
-    background: #f5eee3;
-  }
-
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1rem clamp(1rem, 5vw, 4rem);
-  }
-
-  header img {
-    display: block;
-    width: clamp(100px, 16vw, 180px);
-    height: clamp(45px, 6vw, 58px);
-    object-fit: contain;
+    background: #a84420;
   }
 
   .hero {
     position: relative;
-    min-height: clamp(360px, 75svh, 850px);
-    background: #593e2f;
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
   }
 
-  .hero img {
+  .photo {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -41,22 +25,45 @@
     object-fit: cover;
   }
 
-  .ceiling-fan { object-position: left center; }
+  .ceiling-fan { object-position: left top; }
 
   .bus-stop {
-    object-position: right center;
+    object-position: right top;
     clip-path: polygon(0 0, 100% 0, 100% 100%);
+  }
+
+  .logo {
+    position: absolute;
+    width: clamp(84px, 11vw, 200px);
+    aspect-ratio: 1;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+  }
+
+  .handley-man {
+    left: 12%;
+    top: 55%;
+  }
+
+  .handley-works {
+    left: 36%;
+    top: 16%;
+  }
+
+  @media (max-width: 640px) {
+    .ceiling-fan { object-position: 24% top; }
+    .bus-stop { object-position: 72% top; }
+    .handley-man { left: 21%; top: 59%; }
+    .handley-works { left: 57%; top: 17%; }
   }
 </style>
 </head>
 <body>
-  <header>
-    <img src="handleyworks.png" alt="Handley Works">
-    <img src="handleyman.png" alt="The Handley Man">
-  </header>
   <main class="hero">
-    <img class="ceiling-fan" src="ceilingfan.png" alt="Ceiling fan installation">
-    <img class="bus-stop" src="busstop.png" alt="Circular bus shelter">
+    <img class="photo ceiling-fan" src="ceilingfan.png" alt="Ceiling fan installation">
+    <img class="photo bus-stop" src="busstop.png" alt="Circular bus shelter">
+    <img class="logo handley-man" src="handleyman.png" alt="The Handley Man">
+    <img class="logo handley-works" src="handleyworks.png" alt="Handley Works">
   </main>
 </body>
 </html>
