@@ -28,33 +28,27 @@
   .ceiling-fan { object-position: left top; }
 
   .bus-stop {
-    object-position: right top;
+    object-position: right 75%;
     clip-path: polygon(0 0, 100% 0, 100% 100%);
   }
 
   .logo {
     position: absolute;
-    width: clamp(84px, 11vw, 200px);
+    top: 27%;
+    width: clamp(76px, 9vw, 160px);
     aspect-ratio: 1;
     object-fit: contain;
     transform: translate(-50%, -50%);
   }
 
-  .handley-man {
-    left: 12%;
-    top: 55%;
-  }
-
-  .handley-works {
-    left: 36%;
-    top: 16%;
-  }
+  .handley-man { left: 13%; }
+  .handley-works { left: 38%; }
 
   @media (max-width: 640px) {
     .ceiling-fan { object-position: 24% top; }
-    .bus-stop { object-position: 72% top; }
-    .handley-man { left: 21%; top: 59%; }
-    .handley-works { left: 57%; top: 17%; }
+    .bus-stop { object-position: 80% center; }
+    .handley-man { left: 18%; top: 54%; }
+    .handley-works { left: 56%; top: 17%; }
   }
 </style>
 </head>
