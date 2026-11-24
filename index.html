@@ -16,7 +16,7 @@
     height: 100svh;
     overflow: hidden;
     box-sizing: border-box;
-    border-block: clamp(20px, 5svh, 56px) solid #f5eee3;
+    border-block: clamp(64px, 15svh, 176px) solid #f5eee3;
     background: #a84420;
   }
 
@@ -30,9 +30,19 @@
 
   .ceiling-fan { object-position: left top; }
 
-  .bus-stop {
-    object-position: right 75%;
+  .bus-scene {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#659bd4, #a9c9e9 65%, #e5ded1);
     clip-path: polygon(0 0, 100% 0, 100% 100%);
+  }
+
+  .bus-stop {
+    inset: 0 0 0 auto;
+    width: auto;
+    max-width: 100%;
+    object-position: right bottom;
+    mask-image: linear-gradient(to right, transparent, black 18%);
   }
 
   .logo {
@@ -49,7 +59,11 @@
 
   @media (max-width: 640px) {
     .ceiling-fan { object-position: 24% top; }
-    .bus-stop { object-position: 80% center; }
+    .bus-stop {
+      width: 100%;
+      object-position: 83% bottom;
+      mask-image: none;
+    }
     .handley-man { left: 18%; top: 54%; }
     .handley-works { left: 56%; top: 17%; }
   }
@@ -58,7 +72,9 @@
 <body>
   <main class="hero">
     <img class="photo ceiling-fan" src="ceilingfan.png" alt="Ceiling fan installation">
-    <img class="photo bus-stop" src="busstop.png" alt="Circular bus shelter">
+    <div class="bus-scene">
+      <img class="photo bus-stop" src="busstop.png" alt="Circular bus shelter">
+    </div>
     <img class="logo handley-man" src="handleyman.png" alt="The Handley Man">
     <img class="logo handley-works" src="handleyworks.png" alt="Handley Works">
   </main>
