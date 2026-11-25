@@ -64,19 +64,20 @@
 
   .logo {
     position: absolute;
-    top: 27%;
-    width: clamp(76px, 9vw, 160px);
+    width: clamp(108px, 12vw, 226px);
     aspect-ratio: 1;
     object-fit: contain;
     transform: translate(-50%, -50%);
   }
 
   .handley-man {
-    left: 25%;
+    left: 31%;
     top: 62%;
-    width: clamp(130px, 15vw, 270px);
   }
-  .handley-works { left: 49%; }
+  .handley-works {
+    left: 63%;
+    top: 31%;
+  }
 
   @media (max-width: 640px) {
     .ceiling-fan {
@@ -89,12 +90,9 @@
       object-position: 83% bottom;
       mask-image: none;
     }
-    .handley-man {
-      left: 27%;
-      top: 52%;
-      width: clamp(94px, 27vw, 145px);
-    }
-    .handley-works { left: 56%; top: 17%; }
+    .logo { width: clamp(82px, 23vw, 128px); }
+    .handley-man { left: 30%; top: 54%; }
+    .handley-works { left: 64%; top: 22%; }
   }
 </style>
 </head>
