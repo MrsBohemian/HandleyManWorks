@@ -13,6 +13,7 @@
 
   .hero {
     position: relative;
+    container-type: size;
     --left-crop: clamp(48px, 12vw, 240px);
     width: calc(100% + var(--left-crop));
     margin-left: calc(-1 * var(--left-crop));
@@ -33,7 +34,7 @@
   }
 
   .ceiling-fan {
-    inset: 24% auto auto 0;
+    inset: 24% auto auto calc(41.1% - min(50.8cqw, 90.3cqh));
     width: 80%;
     height: 83%;
     object-fit: fill;
@@ -43,6 +44,10 @@
   }
 
   @media (min-aspect-ratio: 8/5) and (min-width: 900px) {
+    .ceiling-fan {
+      left: calc(41.1% - min(63cqw, 122.1cqh));
+    }
+
     .bus-scene .bus-stop {
       height: 109%;
       top: auto;
@@ -88,6 +93,7 @@
   @media (max-width: 640px) {
     .hero { --left-crop: 8vw; }
     .ceiling-fan {
+      left: 0;
       width: 100%;
       object-fit: cover;
       object-position: 77% center;
