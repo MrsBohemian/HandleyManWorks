@@ -71,7 +71,11 @@
     transform: translate(-50%, -50%);
   }
 
-  .handley-man { left: 13%; }
+  .handley-man {
+    left: 25%;
+    top: 62%;
+    width: clamp(130px, 15vw, 270px);
+  }
   .handley-works { left: 49%; }
 
   @media (max-width: 640px) {
@@ -85,7 +89,11 @@
       object-position: 83% bottom;
       mask-image: none;
     }
-    .handley-man { left: 18%; top: 54%; }
+    .handley-man {
+      left: 27%;
+      top: 52%;
+      width: clamp(94px, 27vw, 145px);
+    }
     .handley-works { left: 56%; top: 17%; }
   }
 </style>
