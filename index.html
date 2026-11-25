@@ -28,16 +28,17 @@
     object-fit: cover;
   }
 
-  .ceiling-fan { object-position: left 23%; }
+  .ceiling-fan {
+    inset: 24% auto auto 0;
+    width: 80%;
+    height: 83%;
+    object-fit: fill;
+    mask-image: linear-gradient(to bottom, transparent, black 18%),
+      linear-gradient(to right, black 88%, transparent);
+    mask-composite: intersect;
+  }
 
   @media (min-aspect-ratio: 8/5) and (min-width: 900px) {
-    .ceiling-fan {
-      left: auto;
-      width: 77%;
-      object-position: left top;
-      mask-image: linear-gradient(to right, transparent, black 21%);
-    }
-
     .bus-scene .bus-stop {
       height: 109%;
       top: auto;
@@ -72,7 +73,11 @@
   .handley-works { left: 49%; }
 
   @media (max-width: 640px) {
-    .ceiling-fan { object-position: 24% top; }
+    .ceiling-fan {
+      width: 100%;
+      object-fit: cover;
+      object-position: 77% center;
+    }
     .bus-stop {
       width: 100%;
       object-position: 83% bottom;
@@ -85,7 +90,7 @@
 </head>
 <body>
   <main class="hero">
-    <img class="photo ceiling-fan" src="ceilingfan.png" alt="Ceiling fan installation">
+    <img class="photo ceiling-fan" src="ceilingfan.png?v=30f4921" alt="Ceiling fan installation">
     <div class="bus-scene">
       <img class="photo bus-stop" src="busstop.png" alt="Circular bus shelter">
     </div>
