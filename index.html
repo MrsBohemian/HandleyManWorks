@@ -7,16 +7,20 @@
 <style>
   body {
     margin: 0;
+    overflow-x: clip;
     background: #f5eee3;
   }
 
   .hero {
     position: relative;
+    --left-crop: clamp(24px, 5vw, 96px);
+    width: calc(100% + var(--left-crop));
+    margin-left: calc(-1 * var(--left-crop));
     height: 100vh;
     height: 100svh;
     overflow: hidden;
     box-sizing: border-box;
-    border-block: clamp(64px, 15svh, 176px) solid #f5eee3;
+    border-block: clamp(40px, 10svh, 112px) solid #f5eee3;
     background: linear-gradient(165deg, #903418, #ac4725 62%, #a64222);
   }
 
@@ -77,11 +81,12 @@
   }
   .handley-works {
     left: 49%;
-    top: 27%;
+    top: 23%;
     width: calc(var(--logo-size) * 1.008);
   }
 
   @media (max-width: 640px) {
+    .hero { --left-crop: 4vw; }
     .ceiling-fan {
       width: 100%;
       object-fit: cover;
