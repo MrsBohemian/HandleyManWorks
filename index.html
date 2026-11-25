@@ -90,22 +90,40 @@
     width: calc(var(--logo-size) * 1.008);
   }
 
-  @media (max-width: 640px) {
-    .hero { --left-crop: 8vw; }
-    .ceiling-fan {
-      left: 0;
+  @media (max-width: 640px), (max-width: 950px) and (orientation: portrait) {
+    .hero {
+      container-type: normal;
       width: 100%;
-      object-fit: cover;
-      object-position: 77% center;
+      margin-left: 0;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      box-sizing: content-box;
+      border-width: 20px;
     }
+
+    .bus-scene {
+      bottom: 42%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 84%);
+    }
+
     .bus-stop {
       width: 100%;
-      object-position: 83% bottom;
+      object-position: right bottom;
       mask-image: none;
     }
-    .logo { --logo-size: clamp(82px, 23vw, 128px); }
-    .handley-man { left: 29%; top: 58%; }
-    .handley-works { left: 56%; top: 17%; }
+
+    .ceiling-fan {
+      inset: 48% 0 0;
+      width: 100%;
+      height: 52%;
+      object-fit: cover;
+      object-position: right bottom;
+      mask-image: none;
+    }
+
+    .logo { --logo-size: clamp(72px, 22vw, 135px); }
+    .handley-works { left: 29%; top: 17%; }
+    .handley-man { left: 23%; top: 75%; }
   }
 </style>
 </head>
