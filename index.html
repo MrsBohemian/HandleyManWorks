@@ -64,19 +64,21 @@
 
   .logo {
     position: absolute;
-    width: clamp(108px, 12vw, 226px);
+    --logo-size: clamp(108px, 12vw, 226px);
+    width: var(--logo-size);
     aspect-ratio: 1;
     object-fit: contain;
     transform: translate(-50%, -50%);
   }
 
   .handley-man {
-    left: 31%;
-    top: 62%;
+    left: 38%;
+    top: 67%;
   }
   .handley-works {
     left: 63%;
     top: 31%;
+    width: calc(var(--logo-size) * 1.008);
   }
 
   @media (max-width: 640px) {
@@ -90,8 +92,8 @@
       object-position: 83% bottom;
       mask-image: none;
     }
-    .logo { width: clamp(82px, 23vw, 128px); }
-    .handley-man { left: 30%; top: 54%; }
+    .logo { --logo-size: clamp(82px, 23vw, 128px); }
+    .handley-man { left: 36%; top: 58%; }
     .handley-works { left: 64%; top: 22%; }
   }
 </style>
