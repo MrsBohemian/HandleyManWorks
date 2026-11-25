@@ -13,14 +13,14 @@
 
   .hero {
     position: relative;
-    --left-crop: clamp(24px, 5vw, 96px);
+    --left-crop: clamp(48px, 12vw, 240px);
     width: calc(100% + var(--left-crop));
     margin-left: calc(-1 * var(--left-crop));
     height: 100vh;
     height: 100svh;
     overflow: hidden;
     box-sizing: border-box;
-    border-block: clamp(40px, 10svh, 112px) solid #f5eee3;
+    border-block: clamp(20px, 5svh, 56px) solid #f5eee3;
     background: linear-gradient(165deg, #903418, #ac4725 62%, #a64222);
   }
 
@@ -46,7 +46,7 @@
     .bus-scene .bus-stop {
       height: 109%;
       top: auto;
-      transform: scaleY(1.22);
+      transform: scale(1.24, 1.22);
       transform-origin: bottom right;
     }
   }
@@ -86,7 +86,7 @@
   }
 
   @media (max-width: 640px) {
-    .hero { --left-crop: 4vw; }
+    .hero { --left-crop: 8vw; }
     .ceiling-fan {
       width: 100%;
       object-fit: cover;
